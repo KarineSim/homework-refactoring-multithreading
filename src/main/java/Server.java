@@ -44,6 +44,9 @@ public class Server {
             }
 
             final var path = parts[1];
+            System.out.println(Request.getQueryParams(path));
+            System.out.println(Request.getQueryParam(path));
+
             if (!VALID_PATHS.contains(path)) {
                 out.write((
                         "HTTP/1.1 404 Not Found\r\n" +
